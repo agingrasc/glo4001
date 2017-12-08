@@ -120,7 +120,7 @@ class Robot:
 
     def _on_error(self, *args, **kargs):
         self.connecting = False
-        raise RuntimeError('Échec de la connexion au robot')
+        raise RuntimeError('echec de la connexion au robot')
 
 
     def _on_close(self, *args, **kargs):

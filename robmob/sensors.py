@@ -118,6 +118,7 @@ class GyroSensor(Sensor):
 
     def parse_message(self, message):
         return {
+            't': message['msg']['header']['stamp']['secs'],
             'x': math.degrees(message['msg']['angular_velocity']['x']),
             'y': math.degrees(message['msg']['angular_velocity']['y']),
             'z': math.degrees(message['msg']['angular_velocity']['z'])
